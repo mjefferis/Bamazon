@@ -20,7 +20,7 @@ function start() {
           name: "id",
           message: "What is the ID of the product you would like to buy?",
           validate: function(value){
-            if(isNaN(value) == false && parseInt(value) > 0 && parseInt(value) < 11){
+            if(isNaN(value) == false && parseInt(value) > 0){
               return true;
             } else{
               return false;

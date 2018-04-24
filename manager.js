@@ -27,6 +27,7 @@ function start() {
                 break;
         }
     });
+    
 }
 
 function viewProducts() {
@@ -37,6 +38,7 @@ function viewProducts() {
         }
        
     });
+    connection.end();
 }
 
 
@@ -49,8 +51,11 @@ function viewLowInventory() {
             }
         }
     });
-   
+    connection.end();
 }
+
+  
+
 
 function addToInventory(){
     connection.query('SELECT * FROM products', function(err, res){
@@ -70,7 +75,8 @@ function addToInventory(){
       name: "quantity",
       message: "How much would you like to add?",
       validate: function(value){
-        if(isNaN(value) === false){return true;}
+        if(isNaN(value) === false){
+          return true;}
         else{return false;}
       }
       }]).then(function(ans){
@@ -87,7 +93,9 @@ function addToInventory(){
             if(err) throw err;
             console.log('Inventory updated!');
           });
+          connection.end();
         })
+       
     });
     
   }
@@ -134,12 +142,16 @@ function addToInventory(){
       }, function(err, res){
         if(err) throw err;
         console.log('Another item was added to the store.');
+
       })
+      connection.end();
     });
     
-
+    
   }
 
 
 
+
 start();
+
