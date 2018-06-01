@@ -35,7 +35,6 @@ function viewProducts() {
         for (var i = 0; i < res.length; i++) {
             console.log("ID: " + res[i].id + " | " + "Product: " + res[i].product_name + " | " + "Department: " + res[i].department_name + " | " + "Price: " + res[i].price + " | " + "Quantity: " + res[i].stock_quantity);
         }
-       
     });
     connection.end();
 }
@@ -138,7 +137,6 @@ function addToInventory(){
       }, function(err, res){
         if(err) throw err;
         console.log('Another item was added to the store.');
-
       })
       connection.end();
     });
