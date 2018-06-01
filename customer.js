@@ -52,12 +52,10 @@ function start() {
                   if(err) throw err;
                   console.log("Your total is $" + total.toFixed(2));
                   connection.end();
-
               });}
               else{console.log('We do not have that much in stock!');
               connection.end();
             }
-            
         } ) } )} 
 
-        start();
+start();
