@@ -26,8 +26,7 @@ function start() {
             case "Add New Product": addNewProduct();
                 break;
         }
-    });
-    
+    }); 
 }
 
 function viewProducts() {
@@ -95,11 +94,8 @@ function addToInventory(){
           });
           connection.end();
         })
-       
     });
-    
   }
-
 
   function addNewProduct(){
     var departments = ["Kitchen", "Sports", "Health"];
@@ -146,8 +142,6 @@ function addToInventory(){
       })
       connection.end();
     });
-    
-    
   }
 
 
