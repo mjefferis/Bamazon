@@ -4,8 +4,8 @@
 Bamazon is an Amazon-like storefront built with MySQL and Node.js. Customer.js takes in orders from customers and depletes stock from the store's inventory. Manager.js lets the user both manage and add items to inventory. It is a command-line application. 
 
 ## Technologies Used
-Node.js
-MySQL
+Node.js</br>
+MySQL</br>
 Inquirer NPM Package
 
 ## Setup
